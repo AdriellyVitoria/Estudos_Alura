@@ -128,11 +128,11 @@ void MediaDaBanda()
         foreach (int nota in bandasRegistradas[nomeDaBanda])
         {
             soma += nota;
-            totalDeNotas += 1; 
+            totalDeNotas += 1;
         }
 
         double media = soma / totalDeNotas;
-        Console.WriteLine($"Media {media} da {nomeDaBanda}");
+        Console.WriteLine($"Media {media} da banda {nomeDaBanda}");
 
 
     } else
