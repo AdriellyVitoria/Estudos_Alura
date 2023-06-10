@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "OrientacaoAoObjeto/1.0.0": {
+        "runtime": {
+          "OrientacaoAoObjeto.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OrientacaoAoObjeto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

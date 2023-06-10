@@ -1,0 +1,15 @@
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.csproj.AssemblyReference.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.AssemblyInfoInputs.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.AssemblyInfo.cs
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.csproj.CoreCompileInputs.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\bin\Debug\net6.0\CursoDesingPatterns.exe
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\bin\Debug\net6.0\CursoDesingPatterns.deps.json
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\bin\Debug\net6.0\CursoDesingPatterns.runtimeconfig.json
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\bin\Debug\net6.0\CursoDesingPatterns.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\bin\Debug\net6.0\CursoDesingPatterns.pdb
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\refint\CursoDesingPatterns.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.pdb
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\CursoDesingPatterns.genruntimeconfig.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\AprendendoCSharp\CursoDesingPatterns\CursoDesingPatterns\obj\Debug\net6.0\ref\CursoDesingPatterns.dll
