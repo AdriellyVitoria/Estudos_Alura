@@ -2,8 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\FilmeApi",
+    "\\FilmeApi\\Controllers",
     "\\FilmeApi\\Data",
-    "\\FilmeApi\\Models"
+    "\\FilmeApi\\Data\\Dtos",
+    "\\FilmeApi\\Models",
+    "\\FilmeApi\\Profiles"
   ],
+  "SelectedNode": "\\FilmeApi\\Data\\Dtos\\UpdateFilmeDto.cs",
   "PreviewInSolutionExplorer": false
 }
