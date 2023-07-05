@@ -122,3 +122,5 @@ C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendend
 C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendendo_Api_CSharp\FilmeApi\obj\Debug\net6.0\FilmeApi.csproj.CopyComplete
 C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendendo_Api_CSharp\FilmeApi\obj\Debug\net6.0\FilmeApi.genruntimeconfig.cache
 C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendendo_Api_CSharp\FilmeApi\obj\Debug\net6.0\ref\FilmeApi.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendendo_Api_CSharp\FilmeApi\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\Aprendendo_Api_CSharp\FilmeApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
