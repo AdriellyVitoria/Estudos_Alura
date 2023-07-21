@@ -1,0 +1,15 @@
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.csproj.AssemblyReference.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.AssemblyInfoInputs.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.AssemblyInfo.cs
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.csproj.CoreCompileInputs.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\bin\Debug\net6.0\Estagio_tech.exe
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\bin\Debug\net6.0\Estagio_tech.deps.json
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\bin\Debug\net6.0\Estagio_tech.runtimeconfig.json
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\bin\Debug\net6.0\Estagio_tech.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\bin\Debug\net6.0\Estagio_tech.pdb
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\refint\Estagio_tech.dll
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.pdb
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\Estagio_tech.genruntimeconfig.cache
+C:\Users\mende\OneDrive\Área de Trabalho\adrielly\alura\Estudos_Alura\aprendendo_controle_de_usuario_csharp\Estagio_tech\Estagio_tech\obj\Debug\net6.0\ref\Estagio_tech.dll
