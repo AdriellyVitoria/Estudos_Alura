@@ -1,23 +1,19 @@
+
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Alura.LeilaoOnline.WebApp.Dados.EfCore;
 using Alura.LeilaoOnline.WebApp.Models;
-using System;
-using System.Collections;
-using System.Collections.Generic;
+
+using Alura.LeilaoOnline.WebApp.Dados;
 
 namespace Alura.LeilaoOnline.WebApp.Controllers
 {
     public class LeilaoController : Controller
     {
-
-        AppDbContext _context;
-        LeilaoDao _dao;
-        public LeilaoController()
+        I_LeilaoDao _dao;
+        public LeilaoController(I_LeilaoDao dao)
         {
-            _context = new AppDbContext();
-            _dao = new LeilaoDao();
+            _dao = dao;
         }
 
         public IActionResult Index()    
