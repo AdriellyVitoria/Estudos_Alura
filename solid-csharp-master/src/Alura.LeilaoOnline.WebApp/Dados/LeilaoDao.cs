@@ -5,10 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Alura.LeilaoOnline.WebApp.Models;
 
-
-
-
-namespace Alura.LeilaoOnline.WebApp.Dados.EfCore
+namespace Alura.LeilaoOnline.WebApp.Dados
 {
     public class LeilaoDao : I_LeilaoDao
     {
