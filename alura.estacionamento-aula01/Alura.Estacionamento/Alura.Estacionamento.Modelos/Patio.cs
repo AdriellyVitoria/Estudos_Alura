@@ -3,6 +3,7 @@ using Alura.Estacionamento.Modelos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,7 +11,7 @@ namespace Alura.Estacionamento.Modelos
 {
     public class Patio
     {
-       
+
         public Patio()
         {
             Faturado = 0;
@@ -18,6 +19,11 @@ namespace Alura.Estacionamento.Modelos
         }
         private List<Veiculo> veiculos;
         private double faturado;
+
+        private Operador _operadorPatio;
+
+        public Operador OperadorPatio { get => _operadorPatio; set => _operadorPatio = value; }
+
         public double Faturado { get => faturado; set => faturado = value; }
         public List<Veiculo> Veiculos { get => veiculos; set => veiculos = value; }       
         public double TotalFaturado()
@@ -33,7 +39,8 @@ namespace Alura.Estacionamento.Modelos
 
         public void RegistrarEntradaVeiculo(Veiculo veiculo)
         {
-            veiculo.HoraEntrada = DateTime.Now;            
+            veiculo.HoraEntrada = DateTime.Now;
+            this.GerarTicker(veiculo);
             this.Veiculos.Add(veiculo);            
         }
 
@@ -82,10 +89,34 @@ namespace Alura.Estacionamento.Modelos
 
             return informacao;
         }
+        public Veiculo PesquisaVeiculo(string IdTicker)
+        {
+            var encontrado = (from veiculo in this.Veiculos
+                              where veiculo.IdTicker == IdTicker
+                              select veiculo).SingleOrDefault();
+            return encontrado;
+        }
 
-        
+        public Veiculo AlterarDadosVeiculo(Veiculo veiculoAlterado)
+        {
+            var veiculoTemp = (from veiculo in this.Veiculos
+                               where veiculo.Placa == veiculoAlterado.Placa
+                               select veiculo).SingleOrDefault();
+            veiculoTemp.AlterarDados(veiculoAlterado);
 
-       
-    
+            return veiculoTemp;
+        }
+
+        private string GerarTicker (Veiculo veiculo )
+        {
+            veiculo.IdTicker = new Guid().ToString().Substring(0, 5);
+            string ticket = "### Ticker Estacionamento Alura ###" +
+                $">>> Identificador: {veiculo.IdTicker}" +
+                $">>> Data/Hora de Entrada: {DateTime.Now}" +
+                $">>> Placa veiculo: {veiculo.Placa}" +
+                $">>> Operador Patio: {this.OperadorPatio.Nome}";
+            veiculo.Ticker = ticket;
+            return ticket;
+        }
     }
 }
