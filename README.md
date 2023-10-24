@@ -8,10 +8,10 @@
     <li>Orientação ao objeto ✅</li>
     <li>ASP.Net Core: construção de API ✅</li>
     <li>Boas práticas de programação SOLID ✅</li>
-    <li>HTML e CSS para projetos web</li>
-    <li>Desenvolver com TypeScript</li>
+    <li>HTML e CSS para projetos web ✅</li>
+    <li>Desenvolver com TypeScript ✅</li>
     <li>Explorar o framework Angular</li>
-    <li>Teste em .Net: testando software</li>
+    <li>Teste em .Net: testando software ✅</li>
 </ul>
 
 
