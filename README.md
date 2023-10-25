@@ -12,6 +12,7 @@
     <li>Desenvolver com TypeScript ✅</li>
     <li>Explorar o framework Angular</li>
     <li>Teste em .Net: testando software ✅</li>
+    <li> Docker ✅ </li>
 </ul>
 
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Pensamento } from 'src/app/core/types/pensamento';
+import { CreatePensamentoDto } from 'src/app/core/types/create-pensamento-dto';
 
 @Component({
   selector: 'app-criar-pensamento',
@@ -7,10 +7,17 @@ import { Pensamento } from 'src/app/core/types/pensamento';
   styleUrls: ['./criar-pensamento.component.css']
 })
 export class CriarPensamentoComponent {
-  pensamento: Pensamento = {
-    id: '1',
+  pensamento: CreatePensamentoDto = {
     conteudo: '',
     autoria: '',
-    modelo: ''
+    modelo: 'modelo1'
+  }
+
+  criarPensamento(): void {
+    alert("Novo pensamento")
+  }
+
+  cancelarPensamento(): void {
+    alert("Cancelar")
   }
 }

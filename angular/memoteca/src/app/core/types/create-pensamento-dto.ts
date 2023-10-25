@@ -1,5 +1,4 @@
-export interface Pensamento {
-  id: string,
+export interface CreatePensamentoDto {
   conteudo: string,
   autoria: string,
   modelo: string
