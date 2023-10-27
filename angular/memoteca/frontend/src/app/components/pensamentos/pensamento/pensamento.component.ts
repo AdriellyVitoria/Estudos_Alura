@@ -10,10 +10,10 @@ export class PensamentoComponent {
 
   @Input()
   pensamento: Pensamento = {
-    conteudo: 'I love Angular',
-    autoria: 'Adriee',
-    modelo: "modelo3",
-    id: '3'
+    conteudo: '',
+    autoria: '',
+    modelo: '',
+    id: ''
   }
 
   larguraPensamento(): string {

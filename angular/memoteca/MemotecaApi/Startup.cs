@@ -21,6 +21,7 @@ public class Startup // Estrutura da api
             options.UseMySQL(connectionString); //conexao com o banco
         });
 
+        services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //Passando a referencia do projeto inteiro
         services.AddControllers(); //Para pegar os controladores
     }
 

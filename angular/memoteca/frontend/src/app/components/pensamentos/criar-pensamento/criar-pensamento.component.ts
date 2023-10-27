@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { PensamentoService } from 'src/app/core/services/pensamento.service';
 import { CreatePensamentoDto } from 'src/app/core/types/create-pensamento-dto';
 
 @Component({
@@ -13,11 +15,20 @@ export class CriarPensamentoComponent {
     modelo: 'modelo1'
   }
 
+  constructor(
+    private service: PensamentoService,
+    private router: Router 
+  ) { }
+
   criarPensamento(): void {
-    alert("Novo pensamento")
+    this.service.criar(this.pensamento).subscribe(() => {
+      this.router.navigate(['/'])
+    })
   }
 
-  cancelarPensamento(): void {
-    alert("Cancelar")
+  cancelarPensamento() {
+    this.router.navigate(['/'])
   }
+
+
 }
