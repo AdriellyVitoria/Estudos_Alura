@@ -10,6 +10,6 @@ public class PensamentoProfile : Profile
     {
         CreateMap<CreatePensamentoDto, Pensamento>();
         CreateMap<Pensamento, ReadPensamentoDto>();
-        CreateMap<ReadPensamentoDto, Pensamento>();
+        CreateMap<UpdatePensamentoDto, Pensamento>();
     }
 }

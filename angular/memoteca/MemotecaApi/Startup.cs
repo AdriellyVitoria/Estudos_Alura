@@ -1,4 +1,5 @@
 ﻿using MemotecaApi.Data;
+using MemotecaApi.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace MemotecaApi;
@@ -21,6 +22,8 @@ public class Startup // Estrutura da api
             options.UseMySQL(connectionString); //conexao com o banco
         });
 
+        services.AddScoped<IPensamentoService, PensamentoService>();
+
         services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies()); //Passando a referencia do projeto inteiro
         services.AddControllers(); //Para pegar os controladores
     }
@@ -40,5 +43,12 @@ public class Startup // Estrutura da api
         {
             endpoints.MapControllers(); //mapear endpoints 
         });
+    }
+
+    public void AddJsonFiles(IConfigurationBuilder builder, IWebHostEnvironment env)
+    {
+        builder
+            .AddJsonFile("appsettings.json")
+            .AddJsonFile($"appsettings.{env.EnvironmentName}.json");
     }
 }

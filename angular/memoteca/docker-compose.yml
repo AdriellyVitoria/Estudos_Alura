@@ -1,0 +1,46 @@
+version: '3.4'
+
+volumes:
+  datamemoteca:
+
+services:
+  memotecaapi:
+    build: 
+      context: ./MemotecaApi
+      dockerfile: Dockerfile
+    depends_on:
+      - dbmemoteca
+    restart: always
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Prod
+    ports:
+      - "3000:80"
+  
+  dbmemoteca:
+    image: mysql:8.0.22
+    cap_add:
+      - SYS_NICE
+    volumes:
+      - datamemoteca:/var/lib/mysql
+      - "~/sql-scripts/setup.sql:/docker-entrypoint-initdb.d/1.sql"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: db
+    command: --bind-address=0.0.0.0
+    extra_hosts:
+    - "host.docker.internal:192.168.0.3"
+
+  front:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - memotecaapi
+    ports:
+      - "8080:80"
+    restart: always
+
+networks:
+  default:
+    name: apprede

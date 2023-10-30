@@ -1,7 +1,5 @@
-﻿using AutoMapper;
-using MemotecaApi.Data;
-using MemotecaApi.Dtos;
-using MemotecaApi.Models;
+﻿using MemotecaApi.Dtos;
+using MemotecaApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MemotecaApi.Controllers;
@@ -10,56 +8,82 @@ namespace MemotecaApi.Controllers;
 [Route("[controller]")]
 public class PensamentoController : ControllerBase
 {
-    private readonly AppDbContext context;
-    private readonly IMapper mapper;
+    private readonly IPensamentoService service;
 
-    public PensamentoController(AppDbContext context, IMapper mapper)
+    public PensamentoController(IPensamentoService service)
     {
-        this.context=context;
-        this.mapper=mapper;
+        this.service=service;
     }
 
     [HttpGet]
-    public IActionResult Get()
+    public IActionResult Get() //faz a requisição
     {
-        IList<ReadPensamentoDto> dtos = mapper.Map<List<ReadPensamentoDto>>(context.Pensamentos.ToList());
-        return Ok(dtos);
+        try
+        {
+            IList<ReadPensamentoDto> dtos = service.BuscaTodos(); //Chama o servico
+            return Ok(dtos); //retorna o servico
+        }
+        catch (Exception)
+        {
+            return StatusCode(500); //culpa do servidor
+        }
     }
 
     [HttpPost]
     public IActionResult Post(CreatePensamentoDto dto)
     {
-        Pensamento pensamento = mapper.Map<Pensamento>(dto);
-        context.Pensamentos.Add(pensamento);
-        context.SaveChanges(); //salva mudanças no banco
-        ReadPensamentoDto readDto = mapper.Map<ReadPensamentoDto>(pensamento);
-        return Ok(readDto);
+        try
+        {
+            ReadPensamentoDto readDto = service.CriarPensamento(dto);
+            return Ok(readDto);
+        }
+        catch (Exception)
+        {
+            return BadRequest(); //Culpa do cliente
+        }
     }
 
     [HttpDelete("{id}")]
     public IActionResult Delete(Guid id)
     {
-        Pensamento pensamento = context.Pensamentos.FirstOrDefault(p => p.Id == id)!; //Para buscar o pensamento
-        context.Remove(pensamento);
-        context.SaveChanges();
-        return NoContent();
+        try
+        {
+            service.ApagarPensamento(id);
+            return NoContent();
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
     }
 
     [HttpGet("{id}")]
     public IActionResult GetOne(Guid id)
     {
-        Pensamento pensamento = context.Pensamentos.FirstOrDefault(p => p.Id == id)!;
-        ReadPensamentoDto readDto = mapper.Map<ReadPensamentoDto>(pensamento);
-        if (readDto != null) return Ok(readDto);
+        try
+        {
+            ReadPensamentoDto readDto = service.BuscarOne(id);
+            if (readDto != null) return Ok(readDto);
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
+        
         return NotFound();
     }
 
     [HttpPut]
-    public IActionResult Put(ReadPensamentoDto readDto)
+    public IActionResult Put(UpdatePensamentoDto readDto)
     {
-        Pensamento pensamento = mapper.Map<Pensamento>(readDto);
-        context.Pensamentos.Update(pensamento);
-        context.SaveChanges();
-        return Ok(pensamento);
+        try
+        {
+            ReadPensamentoDto pensamento = service.Editar(readDto);
+            return Ok(pensamento);
+        }
+        catch (Exception)
+        {
+            return BadRequest();
+        }
     }
 }
