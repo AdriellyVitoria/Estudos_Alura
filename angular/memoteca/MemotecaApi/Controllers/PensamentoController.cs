@@ -50,6 +50,16 @@ public class PensamentoController : ControllerBase
     {
         Pensamento pensamento = context.Pensamentos.FirstOrDefault(p => p.Id == id)!;
         ReadPensamentoDto readDto = mapper.Map<ReadPensamentoDto>(pensamento);
-        return Ok(readDto);
+        if (readDto != null) return Ok(readDto);
+        return NotFound();
+    }
+
+    [HttpPut]
+    public IActionResult Put(ReadPensamentoDto readDto)
+    {
+        Pensamento pensamento = mapper.Map<Pensamento>(readDto);
+        context.Pensamentos.Update(pensamento);
+        context.SaveChanges();
+        return Ok(pensamento);
     }
 }

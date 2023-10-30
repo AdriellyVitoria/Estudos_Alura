@@ -3,9 +3,9 @@
   <p class="conteudo">{{ pensamento.conteudo }}</p>
   <p class="conteudo"><b>{{ pensamento.autoria }}</b></p>
   <div class="acaoes">
-    <button class="botao-excluir" routerLink="/pensamento/excluirPensamento/{{ pensamento.id }}">
-      <img src="../../../../assets/imagens/icone-editar.png" alt="icone de editar">
-      <img src="../../../../assets/imagens/icone-excluir.png" alt="icone de excluir">
+    <button class="botao-excluir">
+      <img src="../../../../assets/imagens/icone-editar.png" alt="icone de editar" routerLink="/pensamento/editarPensamento/{{ pensamento.id }}">
+      <img src="../../../../assets/imagens/icone-excluir.png" alt="icone de excluir" routerLink="/pensamento/excluirPensamento/{{ pensamento.id }}">
     </button>
   </div>
 </div>
