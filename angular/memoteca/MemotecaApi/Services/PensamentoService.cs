@@ -16,9 +16,14 @@ public class PensamentoService : IPensamentoService
         this.mapper=mapper;
     }
 
-    public IList<ReadPensamentoDto> BuscaTodos()
+    public IList<ReadPensamentoDto> BuscaTodos(int _page, int _limit) // Paginação
     {
-        return mapper.Map<List<ReadPensamentoDto>>(context.Pensamentos.ToList());
+        int pularPagina = _limit * (_page - 1);
+        List<Pensamento> pensamentos = context.Pensamentos
+            .Skip(pularPagina)
+            .Take(_limit)
+            .ToList();
+        return mapper.Map<List<ReadPensamentoDto>>(pensamentos);
     }
 
     public ReadPensamentoDto CriarPensamento(CreatePensamentoDto dto)

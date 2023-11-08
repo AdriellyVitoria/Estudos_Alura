@@ -1,6 +1,6 @@
 import { Pensamento } from 'src/app/core/types/pensamento';
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpParams } from '@angular/common/http'
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { CreatePensamentoDto } from '../types/create-pensamento-dto';
@@ -16,8 +16,14 @@ export class PensamentoService {
     private http: HttpClient
   ) { }
 
-  listar(): Observable<Pensamento[]> {
-    return this.http.get<Pensamento[]>(this.apiUrl)
+  listar(pagina: number): Observable<Pensamento[]> {
+    const itensPorPagina = 6;
+
+    let params = new HttpParams()
+      .set("_page", pagina)
+      .set("_limit", itensPorPagina)
+
+    return this.http.get<Pensamento[]>(this.apiUrl, { params })
   }
 
   criar(pensamento: CreatePensamentoDto): Observable<Pensamento> {

@@ -16,11 +16,11 @@ public class PensamentoController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult Get() //faz a requisição
+    public IActionResult Get(int _page = 1, int _limit = 50) //faz a requisição e recebe parametros da query
     {
         try
         {
-            IList<ReadPensamentoDto> dtos = service.BuscaTodos(); //Chama o servico
+            IList<ReadPensamentoDto> dtos = service.BuscaTodos(_page, _limit); //Chama o servico
             return Ok(dtos); //retorna o servico
         }
         catch (Exception)
@@ -30,7 +30,7 @@ public class PensamentoController : ControllerBase
     }
 
     [HttpPost]
-    public IActionResult Post(CreatePensamentoDto dto)
+    public IActionResult Post([FromBody] CreatePensamentoDto dto)
     {
         try
         {
@@ -74,7 +74,7 @@ public class PensamentoController : ControllerBase
     }
 
     [HttpPut]
-    public IActionResult Put(UpdatePensamentoDto readDto)
+    public IActionResult Put([FromBody] UpdatePensamentoDto readDto)
     {
         try
         {
