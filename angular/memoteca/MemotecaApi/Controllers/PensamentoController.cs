@@ -16,11 +16,11 @@ public class PensamentoController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult Get(int _page = 1, int _limit = 50) //faz a requisição e recebe parametros da query
+    public IActionResult Get(int _page = 1, int _limit = 50, string? q = null) //faz a requisição e recebe parametros da query
     {
         try
         {
-            IList<ReadPensamentoDto> dtos = service.BuscaTodos(_page, _limit); //Chama o servico
+            IList<ReadPensamentoDto> dtos = service.BuscaTodos(_page, _limit, q); //Chama o servico
             return Ok(dtos); //retorna o servico
         }
         catch (Exception)

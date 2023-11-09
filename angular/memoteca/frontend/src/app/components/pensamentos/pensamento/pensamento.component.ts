@@ -13,7 +13,8 @@ export class PensamentoComponent {
     conteudo: '',
     autoria: '',
     modelo: '',
-    id: ''
+    id: '',
+    favorito: false
   }
 
   larguraPensamento(): string {

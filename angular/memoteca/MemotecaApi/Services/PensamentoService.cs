@@ -16,14 +16,23 @@ public class PensamentoService : IPensamentoService
         this.mapper=mapper;
     }
 
-    public IList<ReadPensamentoDto> BuscaTodos(int _page, int _limit) // Paginação
+    public IList<ReadPensamentoDto> BuscaTodos(int _page, int _limit, string? q) // Paginação
     {
         int pularPagina = _limit * (_page - 1);
-        List<Pensamento> pensamentos = context.Pensamentos
+
+        IQueryable<Pensamento> pensamentos = context.Pensamentos.AsQueryable();
+
+        if (!string.IsNullOrEmpty(q))
+        {
+            pensamentos = pensamentos
+                .Where(p => p.Conteudo.Contains(q) || p.Autoria.Contains(q) || p.Modelo.Contains(q));
+        }
+
+        pensamentos = pensamentos
             .Skip(pularPagina)
-            .Take(_limit)
-            .ToList();
-        return mapper.Map<List<ReadPensamentoDto>>(pensamentos);
+            .Take(_limit);
+
+        return mapper.Map<List<ReadPensamentoDto>>(pensamentos.ToList());
     }
 
     public ReadPensamentoDto CriarPensamento(CreatePensamentoDto dto)
